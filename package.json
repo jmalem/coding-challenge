@@ -22,5 +22,6 @@
   "dependencies": {
     "esm": "^3.2.25",
     "lodash": "^4.17.20"
-  }
+  },
+  "devDependencies": {}
 }

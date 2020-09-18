@@ -27,6 +27,21 @@ const roles = [
     Name: "Trainer",
     Parent: 3,
   },
+  {
+    Id: 6,
+    Name: "Junior Employee",
+    Parent: 3,
+  },
+  {
+    Id: 7,
+    Name: "Senior Employee",
+    Parent: 3,
+  },
+  {
+    Id: 8,
+    Name: "Mid Level Employee",
+    Parent: 3,
+  },
 ];
 
 const users = [
@@ -55,9 +70,29 @@ const users = [
     Name: "Steve Trainer",
     Role: 5,
   },
+  {
+    Id: 6,
+    Name: "Test Employee",
+    Role: 5,
+  },
+  {
+    Id: 7,
+    Name: "Test Employee 1",
+    Role: 6,
+  },
+  {
+    Id: 8,
+    Name: "Test Employee 2",
+    Role: 7,
+  },
+  {
+    Id: 9,
+    Name: "Test Employee 3",
+    Role: 8,
+  },
 ];
 
-export const data1 = {
+export const data2 = {
   roles: roles,
   users: users,
 };

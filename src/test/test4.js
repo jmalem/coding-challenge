@@ -18,24 +18,32 @@ export default function () {
   console.log("\nget Subordinates of userId -1, print Invalid User");
   try {
     console.log(userSystem.getSubordinates(-1));
+    console.log("Test 4 failed");
+    process.exit(1);
   } catch (e) {
     console.error(e);
   }
   console.log('\nget Subordinates of userId "1", print Invalid User');
   try {
     console.log(userSystem.getSubordinates("1"));
+    console.log("Test 4 failed");
+    process.exit(1);
   } catch (e) {
     console.error(e);
   }
   console.log("\nget Subordinates of userId null, print Invalid User");
   try {
     console.log(userSystem.getSubordinates(null));
+    console.log("Test 4 failed");
+    process.exit(1);
   } catch (e) {
     console.error(e);
   }
   console.log("\nget Subordinates of userId undefined, print Invalid User");
   try {
     console.log(userSystem.getSubordinates(undefined));
+    console.log("Test 4 failed");
+    process.exit(1);
   } catch (e) {
     console.error(e);
   }

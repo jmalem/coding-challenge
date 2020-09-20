@@ -1,5 +1,5 @@
-import { data3 } from "../data/data3";
-import { UserSystem } from "../controller/UserSystem";
+import { data3 } from "src/data/data3";
+import { UserSystem } from "src/controller/UserSystem";
 export default function () {
   console.log(
     "\n===============================================================\n"

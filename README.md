@@ -26,3 +26,7 @@ Run the program with `npm start`
 
 1. delete `coding_challenge/node_modules`
 2. reinstall dependencies `npm intall`
+
+## Contributor
+
+Jansen Malem - https://www.linkedin.com/in/jansen-malem/

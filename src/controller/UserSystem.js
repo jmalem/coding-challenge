@@ -1,4 +1,7 @@
 import _ from "lodash";
+
+// Written by Jansen Malem
+// 17/9/2020
 export class UserSystem {
   constructor(users, roles) {
     this.users = users;
@@ -6,8 +9,22 @@ export class UserSystem {
   }
 
   getSubordinates(userId) {
+    if (_.isNil(userId)) {
+      throw "Invalid User - null input";
+    }
+
+    if (!_.isNumber(userId)) {
+      throw "Invalid User - userId not a number";
+    }
+
+    if (userId <= 0) {
+      throw "Invalid User - negative userId";
+    }
+    // Get user with userId
+    const user = this.users.find((user) => user["Id"] === userId);
+
     // Iterate the roles array, filter out the unwanted roles
-    const childRoles = this.getChildRoles(userId);
+    const childRoles = this.getChildRoles(user["Role"]);
 
     // Filter out roles that belong to the childRoles
     const result = this.users.filter((user) =>

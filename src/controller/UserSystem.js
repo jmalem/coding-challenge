@@ -8,6 +8,11 @@ export class UserSystem {
     this.roles = roles;
   }
 
+  /**
+   * Returns an array of all the direct and indirect subordinates of a user
+   * given its user id
+   * @param {Number} userId
+   */
   getSubordinates(userId) {
     if (_.isNil(userId)) {
       throw "Invalid User - null input";
@@ -34,6 +39,10 @@ export class UserSystem {
     return result;
   }
 
+  /**
+   * Given a roleId, return an array of the subordinates roleIds
+   * @param {*} roleId
+   */
   getChildRoles(roleId = 0) {
     if (_.isNil(roleId)) {
       throw "Invalid role Id";
@@ -42,7 +51,7 @@ export class UserSystem {
     if (roleId < 1) {
       throw "Invalid role Id";
     }
-
+    // create a deep copy, to avoid accidentally changing the object properties
     const roles = _.clone(this.roles);
     const path = [];
     const q = [];
@@ -70,7 +79,6 @@ export class UserSystem {
         path.push(element["Id"]);
       });
     }
-    // console.log(path);
     return path;
   }
 
